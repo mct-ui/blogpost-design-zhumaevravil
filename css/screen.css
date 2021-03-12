@@ -1,3 +1,23 @@
+/*  
+    Fonts
+    ---
+    @font-face declaration
+*/
+
+@font-face {
+    font-family: "Inter Web";
+    font-weight:  400;
+    src: url("../fonts/Inter-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Inter Web";
+    font-weight:  700;
+    src: url("../fonts/Inter-Bold.woff2") format("woff2");
+}
+
+
+
 /*
     Elements: Page
     ---
@@ -5,16 +25,19 @@
 */
 
 html {
-    font-size: 16px;
-    line-height: 1.5;
-    font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
-    color: #111;
-    padding: 48px 24px 24px;
+  font-size: 16px;
+  line-height: 1.5;
+  /*font-family: 'Helvetica Neue', Helvetica, arial, sans-serif;*/
+  font-family: "droid-serif", Georgia, serif;
+  color: #2e3133;
+  padding: 48px 24px 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-    max-width: 42em;
-    margin: 0 auto;
+  max-width: 42em;
+  margin: 0 auto;
 }
 
 /*
@@ -25,9 +48,9 @@ body {
  */
 
 ::selection {
-    background: #e85e00;
-    color: white;
-    text-shadow: none;
+  background: #00e6a1;
+  color: white;
+  text-shadow: none;
 }
 
 /*
@@ -37,8 +60,8 @@ body {
 */
 
 img {
-    max-width: 100%;
-    vertical-align: top;
+  max-width: 100%;
+  vertical-align: top;
 }
 
 /*
@@ -47,32 +70,42 @@ img {
     Default markup for typographic elements
 */
 
+h1,
+h2,
+h3 {
+  color: #17181a;
+  font-family: "Inter Web", "Helvetica Neue", Helvetica, arial, sans-serif;
+}
+
 h1 {
-    font-family: "Times New Roman", serif;
-    font-size: 36px;
-    font-weight: normal;
-    line-height: 40px;
-    margin: 0 0 24px;
+  /*font-family: 'Helvetica neue', Helvetica, Arial, Sans-serif;*/
+  font-size: 36px;
+  line-height: 40px;
+  margin: 0 0 24px;
+  font-family: "Playfair Display", serif;
 }
 
 h2 {
-    font-size: 23px;
-    line-height: 32px;
-    margin: 0 0 24px;
+  font-size: 23px;
+  line-height: 32px;
+  margin: 0 0 24px;
+}
+*+h2{
+    margin-top: 48px;
 }
 
 h3 {
-    font-size: 18px;
-    line-height: 24px;
-    margin: 0 0 24px;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0 0 24px;
 }
 
 h4,
 h5,
 h6 {
-    font-size: 16px;
-    line-height: 24px;
-    margin: 0 0 24px;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 24px;
 }
 
 p,
@@ -82,85 +115,122 @@ dl,
 table,
 address,
 figure {
-    margin: 0 0 24px;
+  margin: 0 0 24px;
 }
 
 ul,
 ol {
-    padding-left: 24px;
+  padding-left: 24px;
 }
 
 li ul,
 li ol {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 blockquote {
-    font-style: italic;
-    font-size: 23px;
-    line-height: 32px;
-    margin: 0 0 24px;
-    font-family: "Times New Roman", serif;
+  font-style: italic;
+  font-size: 23px;
+  line-height: 32px;
+  margin: 0 0 24px;
+  font-family: 'Times New Roman', serif;
 }
 
 blockquote * {
-    font-size: inherit;
-    line-height: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 figcaption {
-    font-size: 12px;
-    line-height: 16px;
-    padding-top: 8px;
-    color: Grey;
+  font-size: 12px;
+  line-height: 16px;
+  padding-top: 8px;
+  color: Grey;
 }
 
 hr {
-    border: 0;
-    height: 1px;
-    background: LightGrey;
-    margin: 0 0 24px;
+  border: 0;
+  height: 1px;
+  background: LightGrey;
+  margin: 0 0 24px;
 }
 
 a {
-    color: RoyalBlue;
-    transition: all .1s ease-in-out;
+  color: #00a1e6;
+  transition: all 0.1s ease-in-out;
 }
 
 a:visited,
 a:active {
-    color: BlueViolet;
+  color: #00e6a1;
 }
 
 a:hover,
 a:focus {
-    color: Crimson;
+  color: #1abaff;
 }
 
 /* Small devices (landscape phones, 576px and up) */
 
-@media (min-width: 576px) {}
+@media (min-width: 576px) {
+}
 
 /* Medium devices (tablets, 768px and up) */
 
 @media (min-width: 768px) {
-    html {
-        padding: 48px 48px 24px;
-    }
-    h1 {
-        font-size: 58px;
-        line-height: 64px;
-    }
+  html {
+    padding: 48px 48px 24px;
+  }
+  h1 {
+    font-size: 58px;
+    line-height: 64px;
+  }
 }
 
 /* Large devices (landscape tablets, desktops, 992px and up) */
 
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+}
 
 /* Extra large devices (large desktops, 1200px and up) */
 
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+}
 
+/* Components: author */
+.c-author{
+    display: flex;
+    align-items: center;
+}
+
+.c-author__image {
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+}
+
+.c-author__name,
+.c-author__meta {
+    margin-bottom: 0;
+}
+
+.c-author__meta {
+    font-size: 14px;
+    font-family: "Inter", "Helvetica Neue", Helvetica, arial, sans-serif;
+    line-height: 24px;
+}
+
+.c-author__name {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.c-author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    gap: 16px;
+}
 /*
     Print styles.
     ---
@@ -169,61 +239,61 @@ a:focus {
 */
 
 @media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important;
-        /* Black prints faster:
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-    /*
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: ' (' attr(href) ')';
+  }
+  abbr[title]:after {
+    content: ' (' attr(title) ')';
+  }
+  /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-    pre {
-        white-space: pre-wrap !important;
-    }
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-    /*
+  a[href^='#']:after,
+  a[href^='javascript:']:after {
+    content: '';
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
      * Printing Tables:
      * http://css-discuss.incutio.com/wiki/Printing_Tables
      */
-    thead {
-        display: table-header-group;
-    }
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
 }
